@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Workout Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-screen" class="screen">
+        <div class="container fade-in">
+            <img src="your-beautiful-image.jpg" alt="Gym Image" class="header-image">
+            <h1>Welcome to Gym Workout </h1>
+            <form id="user-info-form">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" class="input-box animated-input" required><br>
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" class="input-box animated-input" required><br>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" class="input-box animated-input" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+                <button type="submit" class="animated-button">Start Workout</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="workout-screens" class="screen fade-in">
+        <!-- Workout pages will be dynamically added here by JavaScript -->
+    </div>
+
+    <div id="summary-screen" class="screen fade-in" style="display: none;">
+        <div class="container">
+            <h1>Workout Summary</h1>
+            <ul id="summary-list"></ul>
+            <button class="animated-button" onclick="showCompletionScreen()">Finish</button>
+        </div>
+    </div>
+
+    <div id="completion-screen" class="screen fade-in" style="display: none;">
+        <div class="container celebration">
+            <h1>Congratulations!</h1>
+            <p>You have completed today's workout!</p>
+            <img src="gym-equipment-animation.gif" alt="Celebration Animation" class="celebration-animation">
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
